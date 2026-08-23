@@ -1,0 +1,88 @@
+# SouthendOnSea.city
+
+> An independent Southend-on-Sea platform for local news, community propositions, public voting and practical guides.
+
+SouthendOnSea.city is a local information and community-participation platform serving Southend-on-Sea, Essex. It is independent and unofficial, and is not operated by Southend-on-Sea City Council, Essex Police or an election authority.
+
+## Primary purpose
+
+SouthendOnSea.city is best used for exploring and taking part in informal Southend community propositions. It also provides source-linked reporting, public data, practical city information and the Southend Science Exhibition.
+
+## Site sections
+
+- **Vote and Propositions:** original, independently operated community questions with evidence, arguments, deadlines, privacy information and aggregate email-verified response totals.
+- **Publication approval:** safety-screened pending propositions require 10 unique email-verified publication approval votes before Agree, Disagree and Unsure voting opens. Publication approval is not a vote on the proposition itself.
+- **Public Opinion Observatory:** fixed-cutoff monthly editions, live proposition totals, separately counted contact-verified responses, full methodology, limitations and privacy-safe CSV/JSON downloads.
+- **City Watch:** the reporting section for official-source local news and community-safety briefings. City Watch is one section of SouthendOnSea.city, not the name or purpose of the entire platform.
+- **City information:** Southend history, planning guidance, community organisations and practical local resources.
+- **Southend Science Exhibition:** an online-first 2027 exhibition and demand test. The event date is TBA and no physical venue is confirmed. Private provisional entries are published only after moderation; People’s Choice uses email-verified voting when finalists open.
+
+## Editorial notes
+
+- SouthendOnSea.city is a local information and community-participation platform serving Southend-on-Sea, Essex. It is independent and unofficial, and is not operated by Southend-on-Sea City Council, Essex Police or an election authority.
+- Articles reorganise official Essex Police and Southend-on-Sea City Council updates into questions and answers.
+- Rewrites preserve the facts and qualification present in the original update.
+- Each briefing separates concise questions and answers from a roughly 600-word report.
+- Each article exposes its source, editorial status and safety note.
+- Story images are unmodified publisher images and retain source attribution.
+- Propositions, reports and practical guides identify sources and distinguish verified facts from community proposals.
+- Original interviews, contributor photographs, first-hand reports and venue accessibility checks appear only after identity, consent, provenance and rights checks. The public evidence register states its verified record count.
+- Original surveys publish their exact questions, fieldwork dates, aggregate counts, duplicate controls and limitations. They are self-selecting and not representative polling.
+- The public dataset catalogue describes provenance and provides privacy-safe CSV or JSON downloads. Zero-record datasets remain explicit rather than being filled with unverified material.
+- Community votes are informal opinion polls, not official council votes, elections or referendums.
+- Current proposition totals include only responses completed through the one-click email-verification link. Proposition pages expose privacy-safe aggregate CSV files and matching Dataset metadata; they do not expose email addresses or individual records, and they state that the self-selecting sample is not representative.
+- For emergencies in the UK, call 999.
+
+## Machine-readable endpoints
+
+- [Article JSON](https://southendonsea.city/articles.json)
+- [Southend Science Exhibition](https://southendonsea.city/science-exhibition): provisional-project submission information and the annual archive. 0 approved 2027 projects are currently public.
+- [Southend Science Exhibition 2027](https://southendonsea.city/science-exhibition/2027)
+- [Vote landing page](https://southendonsea.city/vote)
+- [Searchable proposition directory](https://southendonsea.city/propositions)
+- [Pending proposition publication approvals](https://southendonsea.city/propositions/pending): 1 currently public pending propositions.
+- [Planning and development guide](https://southendonsea.city/planning-and-development)
+- [Local business directory policy](https://southendonsea.city/local-businesses)
+- [Create a proposition](https://southendonsea.city/create-proposition)
+- [Verified community organisation directory](https://southendonsea.city/organisations)
+- [Community survey methodology](https://southendonsea.city/surveys)
+- [Downloadable Southend datasets](https://southendonsea.city/datasets)
+- [Southend Public Opinion Observatory](https://southendonsea.city/data)
+- [Current proposition data](https://southendonsea.city/data/current-propositions)
+- [Monthly public-opinion reports](https://southendonsea.city/data/monthly-results)
+- [Public-opinion methodology](https://southendonsea.city/data/methodology)
+- [Public-opinion downloads](https://southendonsea.city/data/downloads)
+- [Original reporting and field-evidence register](https://southendonsea.city/original-reporting)
+- [Contribute first-hand evidence](https://southendonsea.city/contribute-first-hand)
+- [Contributor standards](https://southendonsea.city/contributors)
+- [Press and citation resources](https://southendonsea.city/press)
+- [RSS feed](https://southendonsea.city/feed.xml)
+- [Sitemap](https://southendonsea.city/sitemap.xml)
+- [Southend-on-Sea history and map comparison](https://southendonsea.city/about)
+- [Editorial policy](https://southendonsea.city/editorial-policy)
+- [Corrections policy](https://southendonsea.city/corrections)
+- [Submit information for moderation](https://southendonsea.city/submit)
+- [Privacy policy](https://southendonsea.city/privacy)
+
+## Local guides
+
+- [How to choose a reliable builder in Southend-on-Sea](https://southendonsea.city/choosing-a-builder-southend-on-sea): A practical guide to comparing builders, quotations and project preparation, with a local business profile for Owls Building Company.
+
+## Briefings
+
+- [Southend is changing in plain sight — and August left clues everywhere](https://southendonsea.city/articles/southend-changing-priorities-august-2026): From Queensway scaffolding to delayed fridge collections and a railway under pressure, Southend's August evidence trail reveals a city trying to build, connect and maintain itself at the same time.
+- [After Britain's fifth heatwave, when will Southend cool down?](https://southendonsea.city/articles/southend-weather-heatwaves-2026-what-comes-next): Britain has recorded five heatwave episodes in 2026—four during meteorological summer. Southend is cooling now, but the science points to a smaller late-season heat risk and a warmer, better-adapted seaside future.
+- [Calling Southend's Independent Makers and Inventors](https://southendonsea.city/articles/inside-southends-independent-makers-and-inventors): A new open reporting project is looking for the people who repair, experiment, code, craft and invent across Southend-on-Sea — and the unfinished ideas that deserve to be seen.
+- [Thinking in Three Dimensions: How 3D Printing Turns Imagination into Reality](https://southendonsea.city/articles/thinking-in-three-dimensions-3d-printing-southend): From a glowing line of plastic to metal parts and living-tissue models, 3D printing is changing how people learn, repair and invent — and Southend makers of every age can take part.
+- [Southend Science Exhibition invites all ages to turn ideas into projects](https://southendonsea.city/articles/southend-science-exhibition-invites-all-ages): SouthendOnSea.city has opened provisional project submissions for an inclusive, community-led Science Exhibition planned for 2027.
+- [What happened after the Southend High Street fight?](https://southendonsea.city/articles/what-happened-after-southend-high-street-fight): Three men were jailed for a combined term of almost six and a half years after a fight in Southend High Street.
+- [What happened after a driver seriously injured council workers?](https://southendonsea.city/articles/what-happened-after-driver-collision-with-council-workers): A driver was jailed after a collision on Royal Artillery Way seriously injured two Southend council workers.
+- [How was the Southend council relocation fraud case decided?](https://southendonsea.city/articles/how-was-southend-council-relocation-fraud-case-decided): A former social worker was convicted after falsely claiming £7,920 in relocation expenses from the council.
+- [What penalties followed water-safety breaches in Southend?](https://southendonsea.city/articles/what-penalties-followed-water-safety-breaches-in-southend): Two personal watercraft users received £100 fines after reports that they ignored Southend's water-safety restrictions.
+- [What was the outcome of the Southend car-meet cases?](https://southendonsea.city/articles/what-was-the-outcome-of-the-southend-car-meet-cases): Twenty-four drivers were sentenced after police and council staff reviewed footage from a Southend seafront car meet.
+- [What action is Southend taking on illegal tobacco and vapes?](https://southendonsea.city/articles/what-action-is-southend-taking-on-illegal-tobacco-and-vapes): Trading Standards seized illegal tobacco products and non-compliant vapes during operations across Southend.
+
+## Community propositions
+
+- [Bring back The Log Flume ride at Adventure Island](https://southendonsea.city/vote/bring-back-the-log-flume-at-adventure-island): An informal community poll asking whether Adventure Island should consider a new Log Flume attraction on Southend seafront. Aggregate CSV: https://southendonsea.city/vote/bring-back-the-log-flume-at-adventure-island/results.csv
+- [Lego style water Cannons at beach](https://southendonsea.city/vote/lego-style-water-cannons-at-beach-92124325): Water Cannons you can put a pound in to use or scan a adventure Island season pass daily to use. Aggregate CSV: https://southendonsea.city/vote/lego-style-water-cannons-at-beach-92124325/results.csv

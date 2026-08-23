@@ -1,0 +1,95 @@
+aid: southendonsea
+name: SouthendOnSea.city
+description: >-
+  SouthendOnSea.city is an independent local information and community-participation platform for
+  Southend-on-Sea, Essex, covering local news, community propositions and public voting, city
+  information and the Southend Science Exhibition. Its public data API — Southend Now — serves
+  unauthenticated, source-linked current and historical observations for the area: weather,
+  designated bathing waters, marine conditions, modelled air quality and flood alerts. Three
+  operations return the current snapshot, a JSON history and a CSV history, refreshed on a
+  1,800-second interval, with source licensing and attribution preserved in the payload. The
+  platform is independent and unofficial and states plainly that it is not operated by
+  Southend-on-Sea City Council, Essex Police or any election authority.
+type: Index
+url: https://raw.githubusercontent.com/api-evangelist/southendonsea/refs/heads/main/apis.yml
+created: '2026-08-23'
+modified: '2026-08-23'
+specificationVersion: '0.23'
+tags:
+- Open Data
+- Local Government Data
+- Environment
+- Weather
+- Water Quality
+- Air Quality
+- Civic Tech
+- United Kingdom
+tags_raw:
+- open data
+- Southend-on-Sea
+- weather
+- environment
+- local data
+apis:
+- aid: southendonsea:southendonsea-now-api
+  name: Southend Now Public Data API
+  description: >-
+    Unauthenticated, source-linked current and historical Southend-on-Sea observations covering
+    weather, designated bathing waters, marine conditions, modelled air quality and flood alerts.
+    Three operations — current snapshot, JSON history, CSV history.
+  humanURL: https://southendonsea.city/data/reuse
+  baseURL: https://southendonsea.city/
+  tags:
+  - Open Data
+  - Environment
+  - Weather
+  properties:
+  - type: OpenAPI
+    url: openapi/southendonsea-now-api-openapi.yml
+  - type: APIReference
+    url: https://southendonsea.city/openapi.json
+  - type: Documentation
+    url: https://southendonsea.city/data/reuse
+  - type: Examples
+    url: examples/southendonsea-now-example.json
+  - type: JSON
+    url: https://southendonsea.city/api/southend-now
+  - type: CSV
+    url: https://southendonsea.city/api/southend-now/history.csv
+common:
+- type: APIsJSON
+  url: https://southendonsea.city/.well-known/apis.json
+- type: LLMsTxt
+  url: llms/southendonsea-llms.txt
+- type: Website
+  url: https://southendonsea.city
+- type: Documentation
+  url: https://southendonsea.city/data/reuse
+- type: TermsOfService
+  url: https://southendonsea.city/terms
+- type: PrivacyPolicy
+  url: https://southendonsea.city/privacy
+maintainers:
+- FN: SouthendOnSea.city
+  email: hello@southendonsea.city
+  url: https://southendonsea.city
+x-provenance:
+  added: '2026-08-23'
+  method: searched
+  source: https://southendonsea.city/.well-known/apis.json
+  note: >-
+    Submitted via apis.io/add on 2026-08-23 from hello@southendonsea.city and rated 71 (exemplar)
+    by the gate — the highest-rated submission seen in this sweep, and it holds up.
+    Unusually, the submitted APIs.json URL is CORRECT. It resolves at both
+    /.well-known/apis.json and /apis.json, an invented control path returns a real 404, and every
+    property it declares was fetched and confirmed. The OpenAPI is served as
+    application/vnd.oai.openapi+json;version=3.0 — the correct media type, which almost no
+    provider sets.
+    The API was exercised anonymously: GET /api/southend-now returned live observations with real
+    beach records, a licence note and a generatedAt timestamp, and the CSV history endpoint
+    returned text/csv. No key, no signup.
+    ONE THING RECORDED CAREFULLY. This is NOT a council or government API and must not be
+    presented as one. The operator states on its own llms.txt that it is "independent and
+    unofficial, and is not operated by Southend-on-Sea City Council, Essex Police or an election
+    authority", and that its articles reorganise official Essex Police and council updates. The
+    data is source-linked to official publishers; the platform is a third party republishing it.
