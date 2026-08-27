@@ -31,21 +31,16 @@ tags_raw:
 - environment
 - local data
 apis:
-- aid: southendonsea:southendonsea-now-api
-  name: Southend Now Public Data API
-  description: >-
-    Unauthenticated, source-linked current and historical Southend-on-Sea observations covering
-    weather, designated bathing waters, marine conditions, modelled air quality and flood alerts.
-    Three operations — current snapshot, JSON history, CSV history.
+- aid: southendonsea:southendonsea-southend-now-api
+  name: SouthendOnSea.city Southend Now API
+  description: Current and archived source-linked city observations
   humanURL: https://southendonsea.city/data/reuse
   baseURL: https://southendonsea.city/
   tags:
-  - Open Data
-  - Environment
-  - Weather
+  - Southend Now
   properties:
   - type: OpenAPI
-    url: openapi/southendonsea-now-api-openapi.yml
+    url: openapi/southendonsea-southend-now-api-openapi.yml
   - type: APIReference
     url: https://southendonsea.city/openapi.json
   - type: Documentation
