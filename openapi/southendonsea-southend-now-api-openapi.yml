@@ -1,0 +1,189 @@
+openapi: 3.2.0
+info:
+  title: public data Southend Now API
+  version: 1.0.0
+  description: Unauthenticated, source-linked current and historical Southend-on-Sea observations covering weather, designated bathing waters, marine conditions, modelled air quality and flood alerts. Values retain their original source attribution and limitations.
+  contact:
+    name: SouthendOnSea.city editorial desk
+    url: https://southendonsea.city/contact
+  license:
+    name: Source-specific terms; API structure and documentation CC BY 4.0
+    url: https://southendonsea.city/data/reuse
+  x-apisguru-categories:
+  - open_data
+  - location
+  x-logo:
+    url: https://southendonsea.city/southend-city-email-brand.png
+    backgroundColor: '#ffffff'
+servers:
+- url: https://southendonsea.city/
+  description: Production
+tags:
+- name: Southend Now
+  description: Current and archived source-linked city observations
+paths:
+  /api/southend-now:
+    get:
+      tags:
+      - Southend Now
+      operationId: getSouthendNow
+      summary: Get the current Southend Now snapshot
+      description: Returns the latest assembled snapshot. Check `generatedAt`, per-section `available` flags, source URLs and the source-specific terms before reuse.
+      responses:
+        '200':
+          description: Current source-linked snapshot
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CurrentSnapshot'
+        '503':
+          description: No current snapshot could be assembled
+  /api/southend-now/history:
+    get:
+      tags:
+      - Southend Now
+      operationId: getSouthendNowHistoryIndex
+      summary: List archived snapshot dates
+      responses:
+        '200':
+          description: Archive index
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HistoryIndex'
+  /api/southend-now/history.csv:
+    get:
+      tags:
+      - Southend Now
+      operationId: downloadSouthendNowHistoryCsv
+      summary: Download the historical archive as CSV
+      responses:
+        '200':
+          description: UTF-8 CSV archive
+          content:
+            text/csv:
+              schema:
+                type: string
+components:
+  schemas:
+    CurrentSnapshot:
+      type: object
+      required:
+      - name
+      - licenceNote
+      - refreshIntervalSeconds
+      - generatedAt
+      - beaches
+      - weather
+      - air
+      - marine
+      - flood
+      properties:
+        name:
+          type: string
+          example: Southend Now
+        licenceNote:
+          type: string
+        refreshIntervalSeconds:
+          type: integer
+          example: 1800
+        generatedAt:
+          type: string
+          format: date-time
+        beaches:
+          type: array
+          items:
+            $ref: '#/components/schemas/Beach'
+        weather:
+          $ref: '#/components/schemas/ObservationGroup'
+        air:
+          $ref: '#/components/schemas/ObservationGroup'
+        marine:
+          $ref: '#/components/schemas/ObservationGroup'
+        flood:
+          $ref: '#/components/schemas/ObservationGroup'
+    ObservationGroup:
+      type: object
+      required:
+      - available
+      - sourceUrl
+      properties:
+        available:
+          type: boolean
+        sourceUrl:
+          type: string
+          format: uri
+        observedAt:
+          type:
+          - string
+          - 'null'
+      additionalProperties: true
+    HistoryIndex:
+      type: object
+      required:
+      - name
+      - count
+      - dates
+      properties:
+        name:
+          type: string
+          example: Southend Now daily archive
+        count:
+          type: integer
+          minimum: 0
+        dates:
+          type: array
+          items:
+            type: string
+            format: date
+    Beach:
+      type: object
+      required:
+      - slug
+      - name
+      - sourceUrl
+      - available
+      properties:
+        slug:
+          type: string
+        name:
+          type: string
+        sourceUrl:
+          type: string
+          format: uri
+        available:
+          type: boolean
+        status:
+          type:
+          - string
+          - 'null'
+        statusLabel:
+          type:
+          - string
+          - 'null'
+        classification:
+          type:
+          - string
+          - 'null'
+        classificationYear:
+          type:
+          - integer
+          - 'null'
+        latestSampleAt:
+          type:
+          - string
+          - 'null'
+        latitude:
+          type:
+          - number
+          - 'null'
+          format: double
+        longitude:
+          type:
+          - number
+          - 'null'
+          format: double
+      additionalProperties: true
+externalDocs:
+  description: Citation, provenance and responsible reuse guidance
+  url: https://southendonsea.city/data/reuse
