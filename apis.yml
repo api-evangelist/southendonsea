@@ -28,14 +28,11 @@ created: '2026-08-23'
 modified: '2026-08-23'
 specificationVersion: '0.23'
 tags:
-- Open Data
-- Local Government Data
-- Environment
-- Weather
-- Water Quality
-- Air Quality
-- Civic Tech
-- United Kingdom
+- open data
+- Southend-on-Sea
+- weather
+- environment
+- local data
 tags_raw:
 - open data
 - Southend-on-Sea
