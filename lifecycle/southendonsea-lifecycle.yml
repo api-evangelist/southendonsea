@@ -1,0 +1,19 @@
+generated: '2026-09-03'
+method: searched
+source: https://southendonsea.city/data/reuse + live probes 2026-09-03
+versioning:
+  scheme: none
+  current_version: 1.0.0
+  note: Spec info.version is 1.0.0; no version segment in URLs and no versioning policy published.
+deprecation_policy:
+  published: false
+  note: No deprecation policy, Sunset/Deprecation header usage, or changelog found (/changelog and /changes both 404).
+status_page:
+  published: false
+  note: No status page found (/status 404).
+sla:
+  published: false
+data_refresh:
+  interval_seconds: 1800
+  evidence: refreshIntervalSeconds field in the live /api/southend-now payload; cache-control s-maxage=1800 observed.
+deprecated_operations: []

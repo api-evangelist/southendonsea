@@ -1,0 +1,16 @@
+generated: '2026-09-03'
+method: derived
+source: openapi/southendonsea-southend-now-api-openapi.yml
+format: json
+note: >-
+  Errors are plain HTTP statuses, not RFC 9457 problem+json. Only one error response is
+  declared in the contract; the docs publish no separate error reference.
+problem_types:
+- status: 503
+  title: No current snapshot could be assembled
+  operations:
+  - getSouthendNow
+  remediation: >-
+    Retry later — the snapshot is assembled from upstream official sources on a 1,800-second
+    refresh interval; a 503 means no current assembly exists. Check per-section available
+    flags on a 200 for partial upstream outages.

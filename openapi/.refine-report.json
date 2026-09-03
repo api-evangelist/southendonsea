@@ -1,0 +1,19 @@
+{
+  "provider": "southendonsea",
+  "sources": [
+    "southendonsea-now-api-openapi.yml"
+  ],
+  "outputs": [
+    "southendonsea-southend-now-api-openapi.yml"
+  ],
+  "archived": [
+    "archived openapi/southendonsea-now-api-openapi.yml"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "southendonsea-now-api-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "apis.yml register: written (+1 apis, 1 total)"
+  ],
+  "skipped": []
+}

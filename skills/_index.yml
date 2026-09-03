@@ -1,0 +1,10 @@
+generated: '2026-09-03'
+method: generated
+source: openapi/southendonsea-southend-now-api-openapi.yml
+skills:
+- file: southendonsea-current-conditions.md
+  name: southend-current-conditions
+  operations: [getSouthendNow]
+- file: southendonsea-history-archive.md
+  name: southend-history-archive
+  operations: [getSouthendNowHistoryIndex, downloadSouthendNowHistoryCsv]

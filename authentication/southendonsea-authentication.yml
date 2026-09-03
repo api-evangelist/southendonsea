@@ -1,0 +1,10 @@
+generated: '2026-09-03'
+method: searched
+source: https://southendonsea.city/data/reuse
+docs: https://southendonsea.city/data/reuse
+schemes: []
+profile: none
+note: >-
+  The Southend Now API is public and unauthenticated by design — the docs state "public,
+  unauthenticated", the OpenAPI declares no securitySchemes, and the API was exercised
+  anonymously (GET /api/southend-now returned live data with no key or signup).

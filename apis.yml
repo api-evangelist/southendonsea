@@ -25,7 +25,8 @@ deliveryModel:
   generated: '2026-08-28'
   method: derived
 created: '2026-08-23'
-modified: '2026-08-23'
+image: https://southendonsea.city/southend-city-email-brand.png
+modified: '2026-09-03'
 specificationVersion: '0.23'
 tags:
 - Open Data
@@ -44,6 +45,7 @@ apis:
   name: SouthendOnSea.city Southend Now API
   description: Current and archived source-linked city observations
   humanURL: https://southendonsea.city/data/reuse
+  image: https://southendonsea.city/southend-city-email-brand.png
   baseURL: https://southendonsea.city/
   tags:
   - Southend Now
@@ -60,7 +62,35 @@ apis:
     url: https://southendonsea.city/api/southend-now
   - type: CSV
     url: https://southendonsea.city/api/southend-now/history.csv
+  - type: Overlay
+    url: overlays/southendonsea-southend-now-api-overlay.yaml
+  - type: MCPServer
+    url: mcp/southendonsea-mcp.yml
+  - type: ErrorCatalog
+    url: errors/southendonsea-problem-types.yml
+  - type: DataModel
+    url: data-model/southendonsea-data-model.yml
 common:
+- type: WellKnown
+  url: well-known/southendonsea-well-known.yml
+- type: Conformance
+  url: conformance/southendonsea-conformance.yml
+- type: Lifecycle
+  url: lifecycle/southendonsea-lifecycle.yml
+- type: Authentication
+  url: authentication/southendonsea-authentication.yml
+- type: Conventions
+  url: conventions/southendonsea-conventions.yml
+- type: Plans
+  url: plans/southendonsea-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/southendonsea-rate-limits.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Support
+  url: https://southendonsea.city/contact
+- type: DomainSecurity
+  url: security/southendonsea-domain-security.yml
 - type: APIsJSON
   url: https://southendonsea.city/.well-known/apis.json
 - type: LLMsTxt
@@ -97,3 +127,8 @@ x-provenance:
     unofficial, and is not operated by Southend-on-Sea City Council, Essex Police or an election
     authority", and that its articles reorganise official Essex Police and council updates. The
     data is source-linked to official publishers; the platform is a third party republishing it.
+x-enrichment:
+  date: '2026-09-03'
+  status: enriched
+  artifacts_added: 15
+  pass: local-v2

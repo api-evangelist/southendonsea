@@ -1,0 +1,39 @@
+generated: '2026-09-03'
+method: derived
+source: openapi/southendonsea-southend-now-api-openapi.yml + https://southendonsea.city/data/reuse + live probes 2026-09-03
+read_only: true
+auth:
+  style: none
+  note: Public, unauthenticated — no keys, no OAuth, no signup.
+idempotency:
+  coverage: na
+  note: >-
+    Read-only API — all three operations are GETs (getSouthendNow, getSouthendNowHistoryIndex,
+    downloadSouthendNowHistoryCsv). There is no mutating surface, so idempotency does not apply.
+reversibility:
+  status: na
+  note: No write surface — nothing to reverse.
+dry_run:
+  status: na
+  note: No write surface.
+pagination:
+  style: none
+  note: Current snapshot is a single document; the archive is a date index plus a full-CSV download. No pagination parameters.
+versioning:
+  style: none
+  note: No URL or header versioning; see lifecycle/southendonsea-lifecycle.yml.
+error_envelope:
+  format: json
+  note: Plain HTTP statuses; only a 503 is declared. See errors/southendonsea-problem-types.yml.
+rate_limit_signaling:
+  headers: []
+  note: No RateLimit/X-RateLimit/Retry-After headers observed on a live response; no limits documented. See rate-limits/southendonsea-rate-limits.yml.
+caching:
+  note: 'cache-control: public, s-maxage=1800, stale-while-revalidate=86400 observed; payload carries generatedAt and refreshIntervalSeconds (1800).'
+cors:
+  note: 'access-control-allow-origin: * observed — browser-callable.'
+attribution:
+  note: >-
+    Payloads carry licenceNote and per-section sourceUrl; the docs require checking Met Office,
+    UKHSA, Environment Agency, DEFRA UK-AIR and Open-Meteo terms before republishing underlying
+    values. API structure and documentation are CC BY 4.0.

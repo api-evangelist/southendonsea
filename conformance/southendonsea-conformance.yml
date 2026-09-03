@@ -1,0 +1,37 @@
+generated: '2026-09-03'
+method: derived
+source: openapi/southendonsea-southend-now-api-openapi.yml + live probes + https://southendonsea.city/data/reuse
+standards:
+- id: apis-json
+  conforms: true
+  evidence: >-
+    https://southendonsea.city/.well-known/apis.json served 200 (specificationVersion 0.21),
+    also resolves at /apis.json; every declared property fetched and confirmed.
+- id: openapi
+  conforms: true
+  evidence: >-
+    https://southendonsea.city/openapi.json served 200 as
+    application/vnd.oai.openapi+json;version=3.0 — the correct OpenAPI media type — declaring
+    openapi 3.0.3 with 3 paths.
+- id: llms-txt
+  conforms: true
+  evidence: https://southendonsea.city/llms.txt served 200; saved verbatim in llms/.
+- id: oauth2
+  conforms: false
+  evidence: Not applicable — the API is public and unauthenticated by design (docs state "public, unauthenticated"); no securitySchemes declared.
+- id: rfc9457
+  conforms: false
+  evidence: The only declared error (503 on /api/southend-now) carries no application/problem+json content.
+- id: pagination
+  conforms: false
+  evidence: Snapshot + date-index archive model; no pagination parameters anywhere in the contract.
+- id: cors
+  conforms: true
+  evidence: 'access-control-allow-origin: * observed on a live anonymous GET /api/southend-now, 2026-09-03.'
+domain_standard:
+  declared: none
+  note: >-
+    The contract declares no open-data domain standard (no DCAT catalog, no OGC surface).
+    The underlying sources it links to (Environment Agency bathing waters, DEFRA UK-AIR,
+    Met Office) publish under their own schemes; the provider's own contract is bespoke JSON.
+    Reward-only check — no penalty, nothing invented.

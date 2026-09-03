@@ -1,0 +1,23 @@
+overlay: 1.0.0
+x-generated: '2026-09-03'
+x-method: generated
+x-source: openapi/southendonsea-southend-now-api-openapi.yml + live probes 2026-09-03
+info:
+  title: API Evangelist enhancements — Southend Now public data API
+  version: 1.0.0
+extends: southendonsea-southend-now-api-openapi.yml
+actions:
+- target: $.info
+  description: Catalog annotations — refresh cadence read from the live payload, independence disclaimer from the provider's own llms.txt
+  update:
+    x-refresh-interval-seconds: 1800
+    x-independence-note: >-
+      SouthendOnSea.city is independent and unofficial, and is not operated by
+      Southend-on-Sea City Council, Essex Police or an election authority. The API
+      republishes source-linked official data; check each payload's sourceUrl and
+      licenceNote before reuse.
+- target: $.paths['/api/southend-now'].get
+  description: Runtime behavior observed on a live anonymous request 2026-09-03
+  update:
+    x-observed-caching: 'cache-control: public, s-maxage=1800, stale-while-revalidate=86400'
+    x-observed-cors: 'access-control-allow-origin: *'

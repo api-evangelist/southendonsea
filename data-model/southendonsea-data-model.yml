@@ -1,0 +1,42 @@
+generated: '2026-09-03'
+method: derived
+source: openapi/southendonsea-southend-now-api-openapi.yml
+entities:
+- name: CurrentSnapshot
+  description: The assembled source-linked city snapshot (root object of GET /api/southend-now)
+  key_fields: [name, generatedAt, refreshIntervalSeconds, licenceNote]
+- name: Beach
+  description: A designated bathing water with status, classification and coordinates
+  key_fields: [slug, name, sourceUrl, available]
+- name: ObservationGroup
+  description: A per-domain observation block (weather, air, marine, flood) with availability flag and source attribution
+  key_fields: [available, sourceUrl, observedAt]
+- name: HistoryIndex
+  description: Index of archived daily snapshot dates (GET /api/southend-now/history)
+  key_fields: [name, count, dates]
+relationships:
+- from: CurrentSnapshot
+  to: Beach
+  type: has_many
+  via: beaches
+- from: CurrentSnapshot
+  to: ObservationGroup
+  type: has_one
+  via: weather
+- from: CurrentSnapshot
+  to: ObservationGroup
+  type: has_one
+  via: air
+- from: CurrentSnapshot
+  to: ObservationGroup
+  type: has_one
+  via: marine
+- from: CurrentSnapshot
+  to: ObservationGroup
+  type: has_one
+  via: flood
+- from: HistoryIndex
+  to: CurrentSnapshot
+  type: has_many
+  via: dates
+  note: Each archived date resolves to a historical snapshot row in the CSV archive.

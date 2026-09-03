@@ -1,0 +1,36 @@
+generated: '2026-09-03'
+method: probed
+source: live probes of southendonsea.city and www.southendonsea.city
+note: >-
+  The only well-known document served is APIs.json at /.well-known/apis.json (also at /apis.json),
+  saved verbatim as southendonsea-provider-apis.json. Every other probed path returned a real 404
+  (no SPA-shell false positives). The www host 301-redirects everything to the apex.
+hosts:
+- host: southendonsea.city
+  documents:
+  - path: /.well-known/apis.json
+    status: 200
+    file: southendonsea-provider-apis.json
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: www.southendonsea.city
+  note: every probed path 301-redirects to the apex host
+  documents:
+  - path: /.well-known/apis.json
+    status: 301

@@ -1,0 +1,15 @@
+generated: '2026-09-03'
+method: searched
+source: https://southendonsea.city/data/reuse
+plan_count: 0
+plans: []
+note: >-
+  No pricing or plans page exists (/pricing and /plans both 404, probed 2026-09-03). The
+  Southend Now API is a free, public, unauthenticated data service with no tiers, quotas or
+  paid access — the docs describe it as "public, unauthenticated" with source-specific reuse
+  terms rather than commercial plans.
+evidence:
+- url: https://southendonsea.city/pricing
+  status: 404
+- url: https://southendonsea.city/data/reuse
+  status: 200

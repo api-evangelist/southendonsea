@@ -1,0 +1,28 @@
+generated: '2026-09-03'
+method: derived
+source: openapi/southendonsea-southend-now-api-openapi.yml
+status: candidate
+note: >-
+  No official MCP server found — searched the site, llms.txt, /data/reuse docs and GitHub;
+  the provider ships no MCP surface. This is a candidate tool list derived from the three
+  OpenAPI operations. Nobody ships a server; an agent cannot reach this provider over MCP today.
+deployment:
+  mode: none
+  auth: none
+  verified: derived
+tools:
+- name: get_southend_now
+  description: Get the current source-linked Southend-on-Sea snapshot (weather, bathing waters, marine, air quality, flood alerts)
+  operationId: getSouthendNow
+  method: GET
+  path: /api/southend-now
+- name: list_southend_now_history
+  description: List archived daily snapshot dates
+  operationId: getSouthendNowHistoryIndex
+  method: GET
+  path: /api/southend-now/history
+- name: download_southend_now_history_csv
+  description: Download the historical snapshot archive as UTF-8 CSV
+  operationId: downloadSouthendNowHistoryCsv
+  method: GET
+  path: /api/southend-now/history.csv
