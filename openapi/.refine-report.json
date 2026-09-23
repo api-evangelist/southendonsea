@@ -1,19 +1,22 @@
 {
   "provider": "southendonsea",
   "sources": [
-    "southendonsea-now-api-openapi.yml"
+    "_original/southendonsea-now-api-openapi.yml"
   ],
   "outputs": [
     "southendonsea-southend-now-api-openapi.yml"
   ],
-  "archived": [
-    "archived openapi/southendonsea-now-api-openapi.yml"
-  ],
+  "archived": [],
   "errors": [],
   "warnings": [],
   "notes": [
+    "1 archived document(s) dropped as subsets of other archived documents",
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
     "southendonsea-now-api-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
-    "apis.yml register: written (+1 apis, 1 total)"
+    "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "_original/southendonsea-openapi.json: archived document superseded by a larger archived document",
+    "southendonsea-southend-now-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
