@@ -46,7 +46,6 @@ apis:
   description: Current and archived source-linked city observations
   humanURL: https://southendonsea.city/data/reuse
   image: https://southendonsea.city/southend-city-email-brand.png
-  baseURL: https://southendonsea.city/
   tags:
   - Southend Now
   properties:
