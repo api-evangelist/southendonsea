@@ -66,6 +66,58 @@ paths:
                 type: string
 components:
   schemas:
+    CurrentSnapshot:
+      type: object
+      required:
+      - name
+      - licenceNote
+      - refreshIntervalSeconds
+      - generatedAt
+      - beaches
+      - weather
+      - air
+      - marine
+      - flood
+      properties:
+        name:
+          type: string
+          example: Southend Now
+        licenceNote:
+          type: string
+        refreshIntervalSeconds:
+          type: integer
+          example: 1800
+        generatedAt:
+          type: string
+          format: date-time
+        beaches:
+          type: array
+          items:
+            $ref: '#/components/schemas/Beach'
+        weather:
+          $ref: '#/components/schemas/ObservationGroup'
+        air:
+          $ref: '#/components/schemas/ObservationGroup'
+        marine:
+          $ref: '#/components/schemas/ObservationGroup'
+        flood:
+          $ref: '#/components/schemas/ObservationGroup'
+    ObservationGroup:
+      type: object
+      required:
+      - available
+      - sourceUrl
+      properties:
+        available:
+          type: boolean
+        sourceUrl:
+          type: string
+          format: uri
+        observedAt:
+          type:
+          - string
+          - 'null'
+      additionalProperties: true
     Beach:
       type: object
       required:
@@ -114,42 +166,6 @@ components:
           - 'null'
           format: double
       additionalProperties: true
-    CurrentSnapshot:
-      type: object
-      required:
-      - name
-      - licenceNote
-      - refreshIntervalSeconds
-      - generatedAt
-      - beaches
-      - weather
-      - air
-      - marine
-      - flood
-      properties:
-        name:
-          type: string
-          example: Southend Now
-        licenceNote:
-          type: string
-        refreshIntervalSeconds:
-          type: integer
-          example: 1800
-        generatedAt:
-          type: string
-          format: date-time
-        beaches:
-          type: array
-          items:
-            $ref: '#/components/schemas/Beach'
-        weather:
-          $ref: '#/components/schemas/ObservationGroup'
-        air:
-          $ref: '#/components/schemas/ObservationGroup'
-        marine:
-          $ref: '#/components/schemas/ObservationGroup'
-        flood:
-          $ref: '#/components/schemas/ObservationGroup'
     HistoryIndex:
       type: object
       required:
@@ -168,22 +184,6 @@ components:
           items:
             type: string
             format: date
-    ObservationGroup:
-      type: object
-      required:
-      - available
-      - sourceUrl
-      properties:
-        available:
-          type: boolean
-        sourceUrl:
-          type: string
-          format: uri
-        observedAt:
-          type:
-          - string
-          - 'null'
-      additionalProperties: true
 externalDocs:
   description: Citation, provenance and responsible reuse guidance
   url: https://southendonsea.city/data/reuse
