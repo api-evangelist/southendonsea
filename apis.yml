@@ -26,7 +26,7 @@ deliveryModel:
   method: derived
 created: '2026-08-23'
 image: https://southendonsea.city/southend-city-email-brand.png
-modified: '2026-09-03'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 tags:
 - Open Data
@@ -70,6 +70,8 @@ apis:
   - type: DataModel
     url: data-model/southendonsea-data-model.yml
 common:
+- url: https://southendonsea.city/feed.xml
+  type: BlogRSS
 - type: WellKnown
   url: well-known/southendonsea-well-known.yml
 - type: Conformance
