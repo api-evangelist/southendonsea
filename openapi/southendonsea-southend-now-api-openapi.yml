@@ -102,6 +102,24 @@ components:
           $ref: '#/components/schemas/ObservationGroup'
         flood:
           $ref: '#/components/schemas/ObservationGroup'
+    HistoryIndex:
+      type: object
+      required:
+      - name
+      - count
+      - dates
+      properties:
+        name:
+          type: string
+          example: Southend Now daily archive
+        count:
+          type: integer
+          minimum: 0
+        dates:
+          type: array
+          items:
+            type: string
+            format: date
     ObservationGroup:
       type: object
       required:
@@ -166,24 +184,6 @@ components:
           - 'null'
           format: double
       additionalProperties: true
-    HistoryIndex:
-      type: object
-      required:
-      - name
-      - count
-      - dates
-      properties:
-        name:
-          type: string
-          example: Southend Now daily archive
-        count:
-          type: integer
-          minimum: 0
-        dates:
-          type: array
-          items:
-            type: string
-            format: date
 externalDocs:
   description: Citation, provenance and responsible reuse guidance
   url: https://southendonsea.city/data/reuse
