@@ -1,0 +1,12 @@
+{
+ "url": "https://southendonsea.city/openapi.json",
+ "requested_url": "https://southendonsea.city/openapi.json",
+ "status": 200,
+ "content_type": "application/vnd.oai.openapi+json;version=3.0; charset=utf-8",
+ "bytes": 4415,
+ "sha256": "a908180893aadef84f0e4b1b0e3e3d93bfee17d4c27a4fc343c9b569c53d781a",
+ "fetched_at": "2026-10-19",
+ "fetched_by": "APIEvangelist-Harvest/1.0 (+https://apievangelist.com)",
+ "match": "equivalent",
+ "note": "Re-fetched from the provider by verify-openapi-sources.py; the provider's current document describes the same operations (Jaccard 1.0), but the bytes differ, so the archive is an earlier or reformatted copy."
+}
