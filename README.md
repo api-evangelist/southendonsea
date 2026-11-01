@@ -1,4 +1,4 @@
-# southendonsea
+# SouthendOnSea.city
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -63,3 +63,119 @@
 >
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
+
+SouthendOnSea.city is an independent local information and community-participation platform for Southend-on-Sea, Essex, covering local news, community propositions and public voting, city information and the Southend Science Exhibition. Its public data API — Southend Now — serves unauthenticated, source-linked current and historical observations for the area: weather, designated bathing waters, marine conditions, modelled air quality and flood alerts. Three operations return the current snapshot, a JSON history and a CSV history, refreshed on a 1,800-second interval, with source licensing and attribution preserved in the payload. The platform is independent and unofficial and states plainly that it is not operated by Southend-on-Sea City Council, Essex Police or any election authority.
+
+**Areas:** Open Data · Southend-on-Sea · Weather · Environment · local data
+
+## SouthendOnSea.city on APIs.io
+
+Everything profiled for SouthendOnSea.city is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/southendonsea/](https://apis.io/providers/southendonsea/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [SouthendOnSea.city Southend Now API](https://apis.io/apis/southendonsea/southendonsea-southend-now-api/) — Current and archived source-linked city observations
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [southendonsea-mcp.yml](https://apis.io/servers/southendonsea/southendonsea-mcp-yml/)
+
+#### Examples (1)
+
+Example requests and responses.
+
+- [Southendonsea Now Example](https://apis.io/examples/southendonsea/southendonsea-now-example/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Southendonsea Southend Now Api Overlay](https://apis.io/overlays/southendonsea/southendonsea-southend-now-api-overlay/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Southendonsea Authentication](https://apis.io/security/southendonsea/southendonsea-authentication/)
+- [Southendonsea Domain Security](https://apis.io/security/southendonsea/southendonsea-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Southendonsea Plans Pricing](https://apis.io/plans/southendonsea/southendonsea-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Southendonsea Rate Limits](https://apis.io/rate-limits/southendonsea/southendonsea-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://southendonsea.city)
+- [Documentation](https://southendonsea.city/data/reuse)
+- [Support](https://southendonsea.city/contact)
+- [Terms of service](https://southendonsea.city/terms)
+- [Privacy policy](https://southendonsea.city/privacy)
+
+## API Evangelist rating
+
+**Kin Score 30.7** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 43.1 |
+| Contract governance | 4.5 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 35.1 |
+| Access clarity | 21.1 |
+
+**Agent readiness 24.2** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 24.5** — Government & Public Sector
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/southendonsea/](https://apis.io/providers/southendonsea/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for SouthendOnSea.city: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/southendonsea/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
